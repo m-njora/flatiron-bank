@@ -30,10 +30,10 @@ function AddTransactionForm() {
     <div className="search">
       <form onSubmit={handleSubmit} className="ui form">
         <div className="submit">
-          <input value={date} onChange={(e) => setDate(e.target.value)} type="date" name="date" />
-          <input value={description} onChange={(e) => setDescription(e.target.value)} type="text" name="description" placeholder="Description" />
-          <input value={category} onChange={(e) => setCategory(e.target.value)} type="text" name="category" placeholder="Category" />
-          <input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" name="amount" placeholder="Amount" step="0.01" />
+          <input value={date} onChange={(e) => setDate(e.target.value)} type="date" name="date" required/>
+          <input value={description} onChange={(e) => setDescription(e.target.value)} type="text" name="description" placeholder="Description" required/>
+          <input value={category} onChange={(e) => setCategory(e.target.value)} type="text" name="category" placeholder="Category" required/>
+          <input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" name="amount" placeholder="Amount" step="0.01" required/>
         </div>
         <button className="button" type="submit">
           Add Transaction
