@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-//import Transaction from "./Transactions";
-const url ="https://api.npoint.io/a9436ce6c3491d89d286/transactions/"
+//import Transaction from "./Transactions"
+
+const url ="https://mutheki-flatiron-bank.vercel.app/transactions/"
 
 function AddTransactionForm() {
   const [date, setDate] = useState("")
@@ -9,6 +10,8 @@ function AddTransactionForm() {
   const [amount, setAmount] = useState("")
 
   function handleSubmit(e) {
+    e.preventDefault();
+
     fetch(url, {
       method: "POST",
       headers: {
